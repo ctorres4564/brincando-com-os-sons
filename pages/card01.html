@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card 01 — Capa</title>
+  <link rel="stylesheet" href="../src/styles/design-system.css">
+  <style>
+    .card-capa {
+      background-color: var(--color-creme);
+      text-align: center;
+    }
+
+    .header-capa {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .title-capa {
+      font-family: var(--font-title);
+      font-size: 68px;
+      line-height: 1.18;
+      font-weight: 700;
+      color: var(--color-azul-escuro);
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .title-capa .highlight {
+      color: var(--color-coral);
+      position: relative;
+      display: inline-block;
+    }
+
+    .subtitle-capa {
+      font-family: var(--font-body);
+      font-size: 38px;
+      font-weight: 700;
+      color: #529C94;
+      background-color: rgba(116, 189, 181, 0.18);
+      padding: 14px 44px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Grid das 4 ilustrações na capa */
+    .grid-capa {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+      max-width: 820px;
+      margin: 36px auto;
+      width: 100%;
+    }
+
+    .item-capa {
+      background-color: #FFFFFF;
+      border-radius: 36px;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 34px rgba(36, 51, 75, 0.05);
+      border: 3px solid rgba(244, 119, 82, 0.12);
+      padding: 24px;
+      position: relative;
+    }
+
+    .item-capa.item-1 { border-color: rgba(245, 200, 94, 0.35); }
+    .item-capa.item-2 { border-color: rgba(116, 189, 181, 0.35); }
+    .item-capa.item-3 { border-color: rgba(168, 155, 221, 0.35); }
+    .item-capa.item-4 { border-color: rgba(244, 119, 82, 0.35); }
+
+    .item-capa svg {
+      max-width: 190px;
+      max-height: 190px;
+      filter: drop-shadow(0 6px 12px rgba(36, 51, 75, 0.06));
+    }
+
+    /* Balão de fala sutil de dica interativa */
+    .hint-bar {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .hint-bar span {
+      font-family: var(--font-body);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-coral);
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container card-capa">
+    <!-- Decorações suaves de fundo -->
+    <svg class="bg-decor" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="180" r="140" fill="#F5C85E" opacity="0.12" />
+      <circle cx="980" cy="320" r="180" fill="#74BDB5" opacity="0.10" />
+      <circle cx="100" cy="1150" r="160" fill="#A89BDD" opacity="0.10" />
+      <circle cx="960" cy="1100" r="130" fill="#F47752" opacity="0.08" />
+      <!-- Pequenos ícones lúdicos de fala -->
+      <path d="M 850 160 C 865 145 885 155 880 170 C 875 180 860 185 850 180 Z" fill="#74BDB5" opacity="0.25" />
+      <path d="M 210 390 C 220 375 235 385 230 395 C 225 402 215 405 210 400 Z" fill="#F47752" opacity="0.25" />
+    </svg>
+
+    <div class="content">
+      <div class="header-capa">
+        <div class="episode-badge">EPISÓDIO 01</div>
+        <h1 class="title-capa">
+          O QUE ESTAS PALAVRAS <br>
+          <span class="highlight">TÊM EM COMUM?</span>
+        </h1>
+        <div class="subtitle-capa">
+          <span>Descubra brincando!</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid-capa">
+        <!-- 1. Pato -->
+        <div class="item-capa item-1">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gradPato1" cx="45%" cy="40%" r="55%">
+                <stop offset="0%" stop-color="#FFF0A5" />
+                <stop offset="65%" stop-color="#F5C85E" />
+                <stop offset="100%" stop-color="#EAA638" />
+              </radialGradient>
+              <radialGradient id="gradBico1" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FF9B71" />
+                <stop offset="100%" stop-color="#F47752" />
+              </radialGradient>
+            </defs>
+            <path d="M 25 190 Q 60 178 100 190 T 180 190 T 215 190" fill="none" stroke="#74BDB5" stroke-width="6" stroke-linecap="round" opacity="0.75" />
+            <path d="M 60 145 C 35 125 45 105 70 125 C 80 115 105 105 145 110 C 180 115 200 140 195 165 C 190 190 150 195 110 192 C 75 190 55 170 60 145 Z" fill="url(#gradPato1)" />
+            <path d="M 85 145 C 95 125 125 125 150 138 C 160 143 162 160 145 168 C 120 176 95 170 85 145 Z" fill="#EAA638" opacity="0.6" />
+            <circle cx="155" cy="85" r="38" fill="url(#gradPato1)" />
+            <circle cx="145" cy="96" r="10" fill="#F47752" opacity="0.25" />
+            <path d="M 180 82 C 195 80 215 85 212 94 C 210 102 190 102 178 96 Z" fill="url(#gradBico1)" />
+            <circle cx="162" cy="78" r="6.5" fill="#24334B" />
+            <circle cx="160.5" cy="76" r="2.2" fill="#FFFFFF" />
+            <path d="M 152 48 C 156 38 165 42 160 52 Z" fill="#EAA638" />
+          </svg>
+        </div>
+
+        <!-- 2. Panela -->
+        <div class="item-capa item-2">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gradPanela1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#9AD3CD" />
+                <stop offset="50%" stop-color="#74BDB5" />
+                <stop offset="100%" stop-color="#529C94" />
+              </linearGradient>
+              <linearGradient id="gradTampa1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFF8F0" />
+                <stop offset="100%" stop-color="#D9EFEA" />
+              </linearGradient>
+            </defs>
+            <path d="M 105 50 Q 115 35 105 20" fill="none" stroke="#74BDB5" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+            <path d="M 125 45 Q 135 25 125 10" fill="none" stroke="#F5C85E" stroke-width="4.5" stroke-linecap="round" opacity="0.7" />
+            <path d="M 145 52 Q 155 38 148 24" fill="none" stroke="#A89BDD" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+            <path d="M 46 125 C 24 125 24 155 46 155" fill="none" stroke="#24334B" stroke-width="7" stroke-linecap="round" />
+            <path d="M 194 125 C 216 125 216 155 194 155" fill="none" stroke="#24334B" stroke-width="7" stroke-linecap="round" />
+            <rect x="44" y="110" width="152" height="78" rx="28" fill="url(#gradPanela1)" />
+            <path d="M 64 122 C 72 155 72 165 64 175" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+            <ellipse cx="120" cy="110" rx="76" ry="14" fill="#529C94" />
+            <path d="M 48 108 C 55 82 185 82 192 108 Z" fill="url(#gradTampa1)" stroke="#74BDB5" stroke-width="3" />
+            <rect x="110" y="68" width="20" height="15" rx="6" fill="#F47752" />
+          </svg>
+        </div>
+
+        <!-- 3. Pipa -->
+        <div class="item-capa item-3">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 120 165 C 100 185 70 195 90 220 C 98 230 115 225 125 235" fill="none" stroke="#24334B" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 1" />
+            <path d="M 100 182 L 86 177 L 102 190 L 88 195 Z" fill="#F47752" />
+            <path d="M 76 206 L 68 198 L 82 216 L 68 218 Z" fill="#F5C85E" />
+            <path d="M 108 226 L 118 218 L 106 236 L 122 235 Z" fill="#A89BDD" />
+            <polygon points="120,35 60,105 120,105" fill="#F47752" opacity="0.9" />
+            <polygon points="120,35 180,105 120,105" fill="#F5C85E" opacity="0.95" />
+            <polygon points="60,105 120,168 120,105" fill="#74BDB5" opacity="0.9" />
+            <polygon points="180,105 120,168 120,105" fill="#A89BDD" opacity="0.9" />
+            <line x1="120" y1="35" x2="120" y2="168" stroke="#FFF8F0" stroke-width="4.5" stroke-linecap="round" />
+            <path d="M 60 105 Q 120 118 180 105" fill="none" stroke="#FFF8F0" stroke-width="4" stroke-linecap="round" />
+            <polygon points="120,35 180,105 120,168 60,105" fill="none" stroke="#24334B" stroke-width="4" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- 4. Pão -->
+        <div class="item-capa item-4">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gradPao1" cx="48%" cy="38%" r="62%">
+                <stop offset="0%" stop-color="#FFE4B5" />
+                <stop offset="45%" stop-color="#EAA638" />
+                <stop offset="85%" stop-color="#C67623" />
+                <stop offset="100%" stop-color="#934D0B" />
+              </radialGradient>
+              <radialGradient id="gradCorte1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFF6DE" />
+                <stop offset="100%" stop-color="#FCE1A8" />
+              </radialGradient>
+            </defs>
+            <ellipse cx="120" cy="182" rx="78" ry="16" fill="#24334B" opacity="0.12" />
+            <path d="M 44 145 C 38 105 70 65 120 65 C 170 65 202 105 196 145 C 192 172 165 178 120 178 C 75 178 48 172 44 145 Z" fill="url(#gradPao1)" />
+            <path d="M 76 96 C 84 88 94 105 85 116 C 76 124 68 108 76 96 Z" fill="url(#gradCorte1)" stroke="#8A4506" stroke-width="1.8" />
+            <path d="M 112 88 C 124 78 132 105 122 120 C 112 130 102 105 112 88 Z" fill="url(#gradCorte1)" stroke="#8A4506" stroke-width="1.8" />
+            <path d="M 148 96 C 158 88 168 108 158 118 C 148 126 140 108 148 96 Z" fill="url(#gradCorte1)" stroke="#8A4506" stroke-width="1.8" />
+            <circle cx="98" cy="78" r="2" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="140" cy="76" r="2.5" fill="#FFFFFF" opacity="0.7" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hint-bar">
+        <span>Arraste para o lado e veja a resposta 👉</span>
+      </div>
+
+      <div class="footer-signature">
+        <div class="dot"></div>
+        <span>BRINCANDO COM OS SONS</span>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

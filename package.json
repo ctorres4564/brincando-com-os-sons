@@ -1,0 +1,13 @@
+{
+  "name": "brincando-com-os-sons",
+  "version": "1.0.0",
+  "description": "Gerador e exportador de carrosséis educativos para redes sociais",
+  "main": "scripts/render_cards.js",
+  "scripts": {
+    "build": "node scripts/render_cards.js",
+    "test": "node scripts/validate.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.6.0"
+  }
+}

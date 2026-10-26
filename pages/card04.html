@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card 04 — Desafio Interativo</title>
+  <link rel="stylesheet" href="../src/styles/design-system.css">
+  <style>
+    .card-desafio {
+      background-color: var(--color-creme);
+      text-align: center;
+    }
+
+    .header-desafio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .badge-desafio {
+      background-color: rgba(244, 119, 82, 0.16);
+      color: var(--color-coral);
+      padding: 10px 32px;
+      border-radius: 50px;
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .title-desafio {
+      font-family: var(--font-title);
+      font-size: 64px;
+      font-weight: 700;
+      color: var(--color-azul-escuro);
+      line-height: 1.15;
+    }
+
+    .corpo-desafio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .interrogacao-wrapper {
+      width: 220px;
+      height: 230px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 8px 18px rgba(36, 51, 75, 0.08));
+    }
+
+    .pergunta-central {
+      font-family: var(--font-title);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--color-coral);
+      max-width: 820px;
+      line-height: 1.25;
+      margin-bottom: 28px;
+    }
+
+    .dica-box {
+      background-color: #FFFFFF;
+      border-radius: 36px;
+      padding: 28px 40px;
+      box-shadow: 0 12px 32px rgba(36, 51, 75, 0.05);
+      border: 3px solid rgba(116, 189, 181, 0.35);
+      max-width: 840px;
+      width: 100%;
+    }
+
+    .dica-texto {
+      font-family: var(--font-body);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-azul-escuro);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* 3 categorias de inspiração: animal, comida, brinquedo */
+    .categorias-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .categoria-item {
+      background-color: #F8FAF9;
+      border-radius: 24px;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      border: 2px solid transparent;
+    }
+
+    .categoria-item.cat-animal {
+      background-color: rgba(244, 119, 82, 0.08);
+      border-color: rgba(244, 119, 82, 0.2);
+    }
+    .categoria-item.cat-comida {
+      background-color: rgba(245, 200, 94, 0.12);
+      border-color: rgba(245, 200, 94, 0.3);
+    }
+    .categoria-item.cat-brinquedo {
+      background-color: rgba(168, 155, 221, 0.12);
+      border-color: rgba(168, 155, 221, 0.3);
+    }
+
+    .categoria-icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    .categoria-label {
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--color-azul-escuro);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container card-desafio">
+    <svg class="bg-decor" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="180" r="150" fill="#F5C85E" opacity="0.10" />
+      <circle cx="950" cy="800" r="160" fill="#74BDB5" opacity="0.08" />
+      <circle cx="150" cy="1150" r="130" fill="#F47752" opacity="0.08" />
+    </svg>
+
+    <div class="content">
+      <div class="header-desafio">
+        <div class="badge-desafio">DESAFIO INTERATIVO</div>
+        <h2 class="title-desafio">AGORA É SUA VEZ!</h2>
+      </div>
+
+      <div class="corpo-desafio">
+        <!-- Ponto de Interrogação Lúdico -->
+        <div class="interrogacao-wrapper">
+          <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gradDot" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FF9B71" />
+                <stop offset="100%" stop-color="#F47752" />
+              </radialGradient>
+            </defs>
+            <circle cx="85" cy="80" r="18" fill="#F5C85E" />
+            <circle cx="108" cy="54" r="16" fill="#F47752" />
+            <circle cx="138" cy="46" r="20" fill="#74BDB5" />
+            <circle cx="168" cy="58" r="17" fill="#A89BDD" />
+            <circle cx="182" cy="88" r="18" fill="#F5C85E" />
+            <circle cx="170" cy="118" r="16" fill="#F47752" />
+            <circle cx="144" cy="140" r="17" fill="#74BDB5" />
+            <circle cx="130" cy="168" r="16" fill="#A89BDD" />
+            
+            <circle cx="130" cy="220" r="18" fill="url(#gradDot)" />
+            <circle cx="126" cy="216" r="6" fill="#FFFFFF" opacity="0.5" />
+
+            <path d="M 60 50 L 63 56 L 70 57 L 64 62 L 66 69 L 60 65 L 54 69 L 56 62 L 50 57 L 57 56 Z" fill="#F5C85E" opacity="0.8" />
+            <path d="M 195 140 L 197 144 L 202 145 L 198 148 L 199 153 L 195 150 L 191 153 L 192 148 L 188 145 L 193 144 Z" fill="#74BDB5" opacity="0.8" />
+            <circle cx="95" cy="130" r="5" fill="#A89BDD" opacity="0.6" />
+            <circle cx="170" cy="180" r="6" fill="#F5C85E" opacity="0.7" />
+          </svg>
+        </div>
+
+        <h3 class="pergunta-central">QUE OUTRA PALAVRA COMEÇA COM O SOM /P/?</h3>
+
+        <div class="dica-box">
+          <p class="dica-texto">PODE SER UM ANIMAL, UMA COMIDA OU UM BRINQUEDO.</p>
+          
+          <div class="categorias-grid">
+            <!-- Categoria Animal -->
+            <div class="categoria-item cat-animal">
+              <div class="categoria-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="50" cy="62" rx="22" ry="18" fill="#F47752" />
+                  <circle cx="28" cy="38" r="8" fill="#F47752" />
+                  <circle cx="43" cy="28" r="8.5" fill="#F47752" />
+                  <circle cx="58" cy="28" r="8.5" fill="#F47752" />
+                  <circle cx="73" cy="38" r="8" fill="#F47752" />
+                </svg>
+              </div>
+              <span class="categoria-label">ANIMAL</span>
+            </div>
+
+            <!-- Categoria Comida -->
+            <div class="categoria-item cat-comida">
+              <div class="categoria-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 50 40 C 40 26 22 26 22 46 C 22 72 45 84 50 84 C 55 84 78 72 78 46 C 78 26 60 26 50 40 Z" fill="#F5C85E" />
+                  <path d="M 50 36 C 50 24 55 18 60 16" fill="none" stroke="#24334B" stroke-width="3.5" stroke-linecap="round" />
+                  <path d="M 52 26 C 62 20 68 28 58 32 Z" fill="#74BDB5" />
+                </svg>
+              </div>
+              <span class="categoria-label">COMIDA</span>
+            </div>
+
+            <!-- Categoria Brinquedo -->
+            <div class="categoria-item cat-brinquedo">
+              <div class="categoria-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="22" y="24" width="56" height="56" rx="14" fill="#A89BDD" />
+                  <text x="50" y="63" font-family="'Fredoka', sans-serif" font-size="34" font-weight="700" fill="#FFF8F0" text-anchor="middle">P</text>
+                </svg>
+              </div>
+              <span class="categoria-label">BRINQUEDO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-signature">
+        <div class="dot"></div>
+        <span>BRINCANDO COM OS SONS</span>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

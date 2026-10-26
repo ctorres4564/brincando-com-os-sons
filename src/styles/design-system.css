@@ -1,0 +1,110 @@
+/* Design System - Brincando com os Sons */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap');
+
+:root {
+  --color-coral: #F47752;
+  --color-amarelo: #F5C85E;
+  --color-verde-menta: #74BDB5;
+  --color-lilas: #A89BDD;
+  --color-creme: #FFF8F0;
+  --color-azul-escuro: #24334B;
+  --color-branco: #FFFFFF;
+  --color-cinza-suave: #F0EDE6;
+  
+  --font-title: 'Fredoka', cursive, sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background-color: var(--color-creme);
+  font-family: var(--font-body);
+  color: var(--color-azul-escuro);
+}
+
+.card-container {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 85px 80px 65px 80px;
+  background-color: var(--color-creme);
+  overflow: hidden;
+}
+
+/* Background suave com elementos decorativos discretos */
+.bg-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Badge de Episódio */
+.episode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(116, 189, 181, 0.2);
+  color: #3b7c75;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: fit-content;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+/* Rodapé Padronizado */
+.footer-signature {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 20px;
+}
+
+.footer-signature .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-coral);
+}
+
+.footer-signature span {
+  font-family: var(--font-title);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--color-azul-escuro);
+  opacity: 0.85;
+  text-transform: uppercase;
+}
