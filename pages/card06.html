@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card 06 — Assinatura Profissional</title>
+  <link rel="stylesheet" href="../src/styles/design-system.css">
+  <style>
+    .card-profissional {
+      background-color: var(--color-creme);
+      text-align: center;
+    }
+
+    .header-profissional {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .serie-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(116, 189, 181, 0.2);
+      color: #3B7C75;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-family: var(--font-title);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+    }
+
+    /* Card principal com os dados profissionais */
+    .perfil-card {
+      background-color: #FFFFFF;
+      border-radius: 40px;
+      padding: 50px 44px;
+      box-shadow: 0 16px 40px rgba(36, 51, 75, 0.06);
+      border: 3.5px solid rgba(116, 189, 181, 0.35);
+      max-width: 860px;
+      margin: 10px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      position: relative;
+    }
+
+    /* Ícone / Selo de Identidade Profissional com Ilustração Afetuosa */
+    .avatar-wrapper {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(116, 189, 181, 0.2) 0%, rgba(244, 119, 82, 0.15) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid #FFFFFF;
+      box-shadow: 0 8px 24px rgba(36, 51, 75, 0.08);
+      margin-bottom: 6px;
+    }
+
+    .avatar-wrapper svg {
+      width: 105px;
+      height: 105px;
+    }
+
+    .nome-profissional {
+      font-family: var(--font-title);
+      font-size: 64px;
+      font-weight: 700;
+      color: var(--color-azul-escuro);
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .especialidade-tag {
+      background: linear-gradient(135deg, #F47752 0%, #FF9B71 100%);
+      color: #FFFFFF;
+      font-family: var(--font-title);
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 12px 38px;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(244, 119, 82, 0.25);
+      text-transform: uppercase;
+    }
+
+    .registro-crf {
+      font-family: var(--font-body);
+      font-size: 30px;
+      font-weight: 800;
+      color: #529C94;
+      background-color: rgba(116, 189, 181, 0.15);
+      padding: 10px 30px;
+      border-radius: 30px;
+      letter-spacing: 1px;
+    }
+
+    .divisor-decorativo {
+      width: 140px;
+      height: 4px;
+      background: linear-gradient(90deg, #F5C85E, #F47752);
+      border-radius: 2px;
+      margin: 4px 0;
+    }
+
+    .proposito-texto {
+      font-family: var(--font-body);
+      font-size: 28px;
+      line-height: 1.45;
+      font-weight: 700;
+      color: var(--color-azul-escuro);
+      max-width: 720px;
+    }
+
+    /* Bloco de acompanhamento da série */
+    .acompanhe-box {
+      background-color: rgba(245, 200, 94, 0.2);
+      border-radius: 32px;
+      padding: 24px 36px;
+      max-width: 860px;
+      margin: 10px auto;
+      border: 2px dashed rgba(245, 200, 94, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .acompanhe-box svg {
+      width: 38px;
+      height: 38px;
+      color: #8A4506;
+    }
+
+    .acompanhe-box span {
+      font-family: var(--font-title);
+      font-size: 30px;
+      font-weight: 700;
+      color: #6B4300;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container card-profissional">
+    <!-- Elementos decorativos suaves de fundo -->
+    <svg class="bg-decor" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="140" cy="160" r="150" fill="#74BDB5" opacity="0.12" />
+      <circle cx="940" cy="240" r="160" fill="#F5C85E" opacity="0.10" />
+      <circle cx="120" cy="1150" r="170" fill="#A89BDD" opacity="0.10" />
+      <circle cx="960" cy="1120" r="140" fill="#F47752" opacity="0.08" />
+    </svg>
+
+    <div class="content">
+      <div class="header-profissional">
+        <div class="serie-badge">BRINCANDO COM OS SONS</div>
+      </div>
+
+      <!-- Card Central Profissional -->
+      <div class="perfil-card">
+        <!-- Ícone Estilizado de Fonoaudiologia & Comunicação Infantil -->
+        <div class="avatar-wrapper">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ondas sonoras lúdicas -->
+            <path d="M 22 50 C 22 34 34 22 50 22 C 66 22 78 34 78 50" stroke="#74BDB5" stroke-width="5" stroke-linecap="round" />
+            <path d="M 32 50 C 32 40 40 32 50 32 C 60 32 68 40 68 50" stroke="#F5C85E" stroke-width="4.5" stroke-linecap="round" />
+            <!-- Coração afetuoso no centro -->
+            <path d="M 50 46 C 47 41 40 41 38 46 C 35 52 50 63 50 63 C 50 63 65 52 62 46 C 60 41 53 41 50 46 Z" fill="#F47752" />
+            <!-- Base de diálogo -->
+            <path d="M 34 70 C 34 66 40 64 50 64 C 60 64 66 66 66 70" stroke="#24334B" stroke-width="4" stroke-linecap="round" />
+            <circle cx="50" cy="74" r="3" fill="#A89BDD" />
+          </svg>
+        </div>
+
+        <h1 class="nome-profissional">Sônia Torres</h1>
+
+        <div class="especialidade-tag">Fonoaudióloga</div>
+
+        <div class="registro-crf">CRFª 1-17701</div>
+
+        <div class="divisor-decorativo"></div>
+
+        <p class="proposito-texto">
+          Estimulação lúdica da fala e da linguagem na infância, com respeito ao desenvolvimento de cada criança.
+        </p>
+      </div>
+
+      <!-- Caixa de Acompanhamento da Série -->
+      <div class="acompanhe-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Siga para acompanhar os próximos episódios!</span>
+      </div>
+
+      <!-- Rodapé Padronizado da Série -->
+      <div class="footer-signature">
+        <div class="dot"></div>
+        <span>BRINCANDO COM OS SONS</span>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

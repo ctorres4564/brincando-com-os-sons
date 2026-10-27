@@ -48,7 +48,8 @@ async function renderCards() {
     { file: 'card02.html', output: '02_figuras.png', title: 'Card 02 - Exploração Visual' },
     { file: 'card03.html', output: '03_descoberta.png', title: 'Card 03 - Descoberta do Som' },
     { file: 'card04.html', output: '04_desafio.png', title: 'Card 04 - Desafio Interativo' },
-    { file: 'card05.html', output: '05_encerramento.png', title: 'Card 05 - Encerramento e CTA' }
+    { file: 'card05.html', output: '05_encerramento.png', title: 'Card 05 - Encerramento e CTA' },
+    { file: 'card06.html', output: '06_assinatura.png', title: 'Card 06 - Assinatura Profissional' }
   ];
 
   const page = await browser.newPage();

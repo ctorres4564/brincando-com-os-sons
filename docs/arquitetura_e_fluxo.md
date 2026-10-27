@@ -30,7 +30,7 @@ A arquitetura foi desenhada em camadas modulares para facilitar a manutenção e
          ┌───────────────────────┼───────────────────────┐
          ▼                       ▼                       ▼
 ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
-│  5 PNGs (4:5)    │   │  PDF Unificado   │   │ Legendas & Acess.│
+│  6 PNGs (4:5)    │   │  PDF Unificado   │   │ Legendas & Acess.│
 │ (1080x1350 sRGB) │   │ (Conferência)    │   │ (.txt)           │
 └────────┬─────────┘   └────────┬─────────┘   └────────┬─────────┘
          │                      │                      │
@@ -44,10 +44,10 @@ A arquitetura foi desenhada em camadas modulares para facilitar a manutenção e
 
 - **Camada Visual:**
   - `src/styles/design-system.css`: Define as variáveis de cores (Coral, Amarelo, Verde menta, Lilás, Creme e Azul-escuro), tipografia moderna (`Fredoka` e `Nunito`), proporções e classes utilitárias.
-  - `pages/`: Templates independentes para cada card (`card01.html` a `card05.html`), em resolução nativa 1080×1350 px (4:5).
+  - `pages/`: Templates independentes para cada card (`card01.html` a `card06.html`), em resolução nativa 1080×1350 px (4:5). O Card 06 apresenta a assinatura profissional (Sônia Torres — Fonoaudióloga — CRFª 1-17701).
 - **Camada de Serviços & Scripts:**
   - `services/renderService.js`: Encapsula a lógica de automação do Puppeteer com Chromium ou Edge do sistema.
-  - `scripts/render_cards.js`: Executa o fluxo ponta a ponta: renderização dos 5 PNGs, unificação do PDF e criação do ZIP.
+  - `scripts/render_cards.js`: Executa o fluxo ponta a ponta: renderização dos 6 PNGs, unificação do PDF e criação do ZIP.
   - `scripts/validate.js`: Suíte de testes automatizados que verifica dimensões exatas de cada PNG (via headers IHDR), existência dos arquivos e cumprimento das diretrizes editoriais.
 
 ---

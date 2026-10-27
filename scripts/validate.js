@@ -28,6 +28,7 @@ function runTests() {
     '03_descoberta.png',
     '04_desafio.png',
     '05_encerramento.png',
+    '06_assinatura.png',
     'legenda_instagram.txt',
     'legenda_facebook.txt',
     'texto_alternativo.txt',
@@ -53,7 +54,8 @@ function runTests() {
     '02_figuras.png',
     '03_descoberta.png',
     '04_desafio.png',
-    '05_encerramento.png'
+    '05_encerramento.png',
+    '06_assinatura.png'
   ];
 
   for (const png of pngFiles) {
